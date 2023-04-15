@@ -47,7 +47,10 @@ export class HomeComponent implements OnInit {
       this.cd.markForCheck();
     });
   }
-
+  logout() {
+    this.userService.purgeAuth();
+    this.router.navigateByUrl('/');
+  }
   trackByFn(index, item) {
     return index;
   }

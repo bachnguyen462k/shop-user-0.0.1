@@ -1,17 +1,45 @@
 <div class="article-meta">
-  <a [routerLink]="['/profile', article.author.username]">
-    <img [src]="article.author.image || 'https://static.productionready.io/images/smiley-cyrus.jpg'" alt="author image" />
-  </a>
-
-  <div class="info">
-    <a class="author"
+  <div class="d-flex align-items-center py-1">
+    <div class="symbol symbol-30px me-2">
+      <div [routerLink]="['/profile', article.author.username]"
+        class="symbol-label fs-3 lh-1 fw-bold text-uppercase bg-primary text-inverse-primary"
+      >
+      <img [src]="article.author.image || 'https://static.productionready.io/images/smiley-cyrus.jpg'" alt="author image" />
+      </div>
+    </div>
+    <div
+      class="d-flex flex-column align-items-start justify-content-center"
+    >
+      <span  
+        class="d-flex align-items-center text-gray-900 fs-7 fw-bolder lh-1 mb-2"
+      >
+      <a class="author"
       [routerLink]="['/profile', article.author.username]">
       {{ article.author.username }}
     </a>
-    <span class="date">
-      {{ article.createdAt | date: 'longDate' }}
-    </span>
+      <!-- thêm role cho user -->
+        <span
+          class="badge badge-success fs-9 fw-bold px-2 py-1 h-auto ms-2 rounded-1"
+          data-bs-toggle="tooltip"
+          title=""
+          data-bs-original-title="Keenthemes team"
+          >Author</span
+        ></span
+      ><span
+        class="text-muted fs-8 fw-bold lh-1"
+        data-bs-toggle="tooltip"
+        data-bs-dismiss="click"
+        title=""
+        data-bs-original-title="10 Jan, 2023 11:48 AM UTC"
+        > {{ article.createdAt | date: 'longDate' }}</span
+      >
+    </div>
   </div>
-
   <ng-content></ng-content>
 </div>
+
+
+
+
+       
+    
