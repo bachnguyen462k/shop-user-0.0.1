@@ -30,8 +30,8 @@
             </div>
           </div>
         </a>
-        <div class="d-flex align-items-center py-1 me-n3" [hidden]="!canModify">
-          <button
+        <div class="d-flex align-items-center py-1 me-n3">
+          <button  [hidden]="!canModify"
             (click)="deleteClicked()"
             class="btn btn-sm btn-flex btn-color-gray-500 btn-active-primary h-30px px-3 py-0"
           >
