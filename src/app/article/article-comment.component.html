@@ -1,24 +1,51 @@
-
-
-<div class="card">
-  <div class="card-block">
-    <p class="card-text">
-      {{ comment.body }}
-    </p>
-  </div>
-  <div class="card-footer">
-    <a class="comment-author" [routerLink]="['/profile', comment.author.username]">
-      <img [src]="comment.author.image || 'https://static.productionready.io/images/smiley-cyrus.jpg'" alt="author image" class="comment-author-img" />
-    </a>
-    &nbsp;
-    <a class="comment-author" [routerLink]="['/profile', comment.author.username]">
-      {{ comment.author.username }}
-    </a>
-    <span class="date-posted">
-      {{ comment.createdAt | date: 'longDate' }}
-    </span>
-    <span class="mod-options" [hidden]="!canModify">
-      <i class="ion-trash-a" (click)="deleteClicked()"></i>
-    </span>
+<div class="mb-10" id="kt_post_replies">
+  <div
+    class="border border-gray-200 border-2 rounded p-3 p-lg-9 mb-7"
+    id="kt_post_comment_7977"
+    data-kt-reply-id="7977"
+  >
+    <div class="mb-0">
+      <div class="d-flex flex-stack flex-wrap mb-5">
+        <a href="https://devs.keenthemes.com/user/48234">
+          <div class="d-flex align-items-center py-1">
+            <div class="symbol symbol-30px me-2">
+              <img
+                [src]="
+                  comment.author.image ||
+                  'https://static.productionready.io/images/smiley-cyrus.jpg'
+                "
+                alt="user"
+              />
+            </div>
+            <div
+              class="d-flex flex-column align-items-start justify-content-center"
+            >
+              <span
+                class="d-flex align-items-center text-gray-900 fs-7 fw-bolder lh-1 mb-2"
+              >
+                {{ comment.author.username }} </span
+              ><span class="text-muted fs-8 fw-bold lh-1">
+                {{ comment.createdAt | date : "longDate" }}</span
+              >
+            </div>
+          </div>
+        </a>
+        <div class="d-flex align-items-center py-1 me-n3" [hidden]="!canModify">
+          <button
+            (click)="deleteClicked()"
+            class="btn btn-sm btn-flex btn-color-gray-500 btn-active-primary h-30px px-3 py-0"
+          >
+            Xóa
+          </button>
+        </div>
+      </div>
+      <div
+        class="fs-5 fw-normal text-gray-800 overflow-hidden"
+        [innerHTML]="comment.body"
+      ></div>
+    </div>
+    <div class="ps-10 mb-0" id="kt_post_comment_7977_wrapper">
+      <div class="ps-5 ps-lg-10 2"></div>
+    </div>
   </div>
 </div>
