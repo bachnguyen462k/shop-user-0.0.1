@@ -100,7 +100,7 @@
       <div class="card-header align-items-center border-0">
         <h3 class="card-title fw-bolder text-gray-900 fs-3">Tags</h3>
       </div>
-      <div class="card-body pt-0">
+      <div class="card-body pt-0" *ngFor="let tag of tags; trackBy: trackByFn" >
         <div class="d-flex align-items-center mb-7">
           <span class="svg-icon svg-icon-2 mt-0 me-3"
             ><svg
@@ -125,14 +125,13 @@
               ></path></svg></span
           ><a
             class="text-hover-primary fs-6 fw-bold text-gray-800"
-            [hidden]="!listConfig.filters.tag"
           >
-            {{ listConfig.filters.tag }}
+          {{ tag }}
           </a>
         </div>
       </div>
     </div>
-    <div class="card card-flush border-0 card-p-0">
+    <!-- <div class="card card-flush border-0 card-p-0">
       <div class="card-body pt-0">
         <a href="https://keenthemes.com/products/templates-mega-bundle"
           ><img
@@ -141,6 +140,6 @@
             alt="volume"
         /></a>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
