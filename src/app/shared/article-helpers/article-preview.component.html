@@ -91,7 +91,7 @@
           title=""
           data-bs-original-title="By Sean 1 week ago"
         >
-          14 Bình luận
+        {{ article.totalCmt }} Bình luận
         </a>
         <!-- tags của bài viết -->
         <div [routerLink]="['/article', article.slug]" class="preview-link" *ngFor="let tag of article.tagList; trackBy: trackByFn">
