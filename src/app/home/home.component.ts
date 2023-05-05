@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
     private tagsService: TagsService,
     private userService: UserService,
     private cd: ChangeDetectorRef
-  ) {}
+  ) { }
 
   isAuthenticated: boolean;
   listConfig: ArticleListConfig = {
@@ -24,6 +24,7 @@ export class HomeComponent implements OnInit {
   };
   tags: Array<string> = [];
   tagsLoaded = false;
+  title: string = '';
 
   ngOnInit() {
     this.userService.isAuthenticated.subscribe(
@@ -41,11 +42,11 @@ export class HomeComponent implements OnInit {
     );
 
     this.tagsService.getAll()
-    .subscribe(tags => {
-      this.tags = tags;
-      this.tagsLoaded = true;
-      this.cd.markForCheck();
-    });
+      .subscribe(tags => {
+        this.tags = tags;
+        this.tagsLoaded = true;
+        this.cd.markForCheck();
+      });
   }
   logout() {
     this.userService.purgeAuth();
@@ -63,6 +64,10 @@ export class HomeComponent implements OnInit {
     }
 
     // Otherwise, set the list object
-    this.listConfig = {type: type, filters: filters};
+    this.listConfig = { type: type, filters: filters };
+    this.title = "Mới nhất";
+    if (type === "feed") {
+      this.title = "Theo dõi";
+    };
   }
 }
