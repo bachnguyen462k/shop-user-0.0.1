@@ -1,88 +1,181 @@
-<div id="kt_content_container" class="d-flex flex-column-fluid align-items-stretch container-xxl ">
-  <div id="kt_aside" class="aside" data-kt-drawer="true" data-kt-drawer-name="aside"
-    data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true"
-    data-kt-drawer-width="{default:'200px', '300px': '225px'}" data-kt-drawer-direction="start"
-    data-kt-drawer-toggle="#kt_aside_mobile_toggle" data-kt-sticky="true" data-kt-sticky-name="aside-sticky"
-    data-kt-sticky-offset="{default: false, lg: '0px'}" data-kt-sticky-release-offset="{lg: '600px'}"
-    data-kt-sticky-width="{lg: '225px'}" data-kt-sticky-left="auto" data-kt-sticky-top="94px"
-    data-kt-sticky-animation="false" data-kt-sticky-zindex="95">
-    <div class="hover-scroll-overlay-y my-5 my-lg-5 w-100 ps-4 ps-lg-0 pe-4 me-1" id="kt_aside_menu_wrapper"
-      data-kt-scroll="true" data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-height="auto"
-      data-kt-scroll-dependencies="#kt_header" data-kt-scroll-wrappers="#kt_aside" data-kt-scroll-offset="5px"
-      style="height: 797px;">
-      <div class="menu menu-column menu-active-bg menu-hover-bg menu-title-gray-700 fs-5 menu-rounded w-100"
-        id="#kt_aside_menu" data-kt-menu="true">
-        <div class="menu-item">
-          <div class="menu-content pb-2"><span
-              class="menu-section text-muted text-uppercase fs-7 fw-bolder">Public</span></div>
+<div class="blogM">
+  <!--[ Main content ]-->
+  <main class="blogItm mainbar">
+    <!-- chay silde -->
+    <div class="sldO scrlH section" id="slider-widget">
+      <div class="widget Image" data-version="2" id="Image1">
+        <div class="sldC" id="Image1_img">
+          <div
+            class="sldIm lazy loaded"
+            data-style="background-image: url(https://1.bp.blogspot.com/-yMSpgmjn390/YF1Q5CvGIcI/AAAAAAAAQlg/59LxYemhlyEbbhqlpdfypu5OXRav4t-JgCNcBGAsYHQ/s1600/slider-1-min.png)"
+            lazied=""
+            style="
+              background-image: url('https://1.bp.blogspot.com/-yMSpgmjn390/YF1Q5CvGIcI/AAAAAAAAQlg/59LxYemhlyEbbhqlpdfypu5OXRav4t-JgCNcBGAsYHQ/s1600/slider-1-min.png');
+            "
+          ></div>
+          <noscript>
+            <div
+              class="sldIm"
+              style="
+                background-image: url(https://1.bp.blogspot.com/-yMSpgmjn390/YF1Q5CvGIcI/AAAAAAAAQlg/59LxYemhlyEbbhqlpdfypu5OXRav4t-JgCNcBGAsYHQ/s1600/slider-1-min.png);
+              "
+            ></div>
+          </noscript>
         </div>
-        <div class="menu-item"><a [ngClass]="{'active': listConfig.type === 'all' && !listConfig.filters.tag}"
-            (click)="setListTo('all')" class="menu-link active"><span class="menu-title">Tất cả</span><span
-              class="menu-badge">2,999</span></a></div>
-        <div class="menu-item"><a [ngClass]="{'active': listConfig.type === 'feed'}" (click)="setListTo('feed')"
-            class="menu-link "><span class="menu-title">Của bạn</span></a></div>
-        <div class="menu-item"><a  class="menu-link "><span
-              class="menu-title">Tags</span></a></div>
-        <div class="menu-item pt-5">
-          <div class="menu-content pb-2"><span
-              class="menu-section text-muted text-uppercase fs-7 fw-bolder">Categories</span></div>
+        <div class="sldS"></div>
+      </div>
+      <div class="widget Image" data-version="2" id="Image2">
+        <div class="sldC" id="Image2_img">
+          <div
+            class="sldIm lazy loaded"
+            data-style="background-image: url(https://1.bp.blogspot.com/-dGxoQ9YQYsM/YF1Q71CYmII/AAAAAAAAQlo/0scDqH__JA87HT6QpRcFZt9Y7CucundjQCNcBGAsYHQ/s1600/slider-2-min.png)"
+            lazied=""
+            style="
+              background-image: url('https://1.bp.blogspot.com/-dGxoQ9YQYsM/YF1Q71CYmII/AAAAAAAAQlo/0scDqH__JA87HT6QpRcFZt9Y7CucundjQCNcBGAsYHQ/s1600/slider-2-min.png');
+            "
+          ></div>
+          <noscript>
+            <div
+              class="sldIm"
+              style="
+                background-image: url(https://1.bp.blogspot.com/-dGxoQ9YQYsM/YF1Q71CYmII/AAAAAAAAQlo/0scDqH__JA87HT6QpRcFZt9Y7CucundjQCNcBGAsYHQ/s1600/slider-2-min.png);
+              "
+            ></div>
+          </noscript>
         </div>
-        <div class="menu-item"><a href="https://devs.keenthemes.com/categories/suggestions" class="menu-link "><span
-              class="menu-title">Suggestions</span><span class="menu-badge">88</span></a></div>
-        <div class="menu-item"><a href="https://devs.keenthemes.com/categories/pre-sale-questions"
-            class="menu-link "><span class="menu-title">Pre-sale Questions</span><span class="menu-badge">125</span></a>
+        <div class="sldS"></div>
+      </div>
+      <div class="widget Image" data-version="2" id="Image3">
+        <div class="sldC" id="Image3_img">
+          <div
+            class="sldIm lazy loaded"
+            data-style="background-image: url(https://1.bp.blogspot.com/-vK7BQxXeYnk/YF1Q9MVgZ8I/AAAAAAAAQls/OanP_Tl4sd4616Y1RaD2JPA_UOWtMkDAQCNcBGAsYHQ/s1600/slider-3-min.png)"
+            lazied=""
+            style="
+              background-image: url('https://1.bp.blogspot.com/-vK7BQxXeYnk/YF1Q9MVgZ8I/AAAAAAAAQls/OanP_Tl4sd4616Y1RaD2JPA_UOWtMkDAQCNcBGAsYHQ/s1600/slider-3-min.png');
+            "
+          ></div>
+          <noscript>
+            <div
+              class="sldIm"
+              style="
+                background-image: url(https://1.bp.blogspot.com/-vK7BQxXeYnk/YF1Q9MVgZ8I/AAAAAAAAQls/OanP_Tl4sd4616Y1RaD2JPA_UOWtMkDAQCNcBGAsYHQ/s1600/slider-3-min.png);
+              "
+            ></div>
+          </noscript>
         </div>
-        <div class="menu-item"><a href="https://devs.keenthemes.com/categories/metronic" class="menu-link "><span
-              class="menu-title">Metronic</span><span class="menu-badge">2,493</span></a></div>
-        <div class="menu-item" *appShowAuthed="false"><a routerLink="/login" routerLinkActive="active"
-            class="menu-link "><span class="menu-title">Đăng nhập</span></a></div>
-        <div class="menu-item" *appShowAuthed="true"><a (click)="logout()" class="menu-link "><span
-              class="menu-title">Đăng xuất</span></a></div>
+        <div class="sldS"></div>
+      </div>
+      <div class="widget Image" data-version="2" id="Image4">
+        <div class="sldC" id="Image4_img">
+          <div
+            class="sldIm lazy loaded"
+            data-style="background-image: url(https://1.bp.blogspot.com/-Q_BGkGuukLE/YF1Q67reH4I/AAAAAAAAQlk/jXe6LIyIjkkNpJu7ShtztoUWV4JylmCkgCNcBGAsYHQ/s1600/slider-4-min.png)"
+            lazied=""
+            style="
+              background-image: url('https://1.bp.blogspot.com/-Q_BGkGuukLE/YF1Q67reH4I/AAAAAAAAQlk/jXe6LIyIjkkNpJu7ShtztoUWV4JylmCkgCNcBGAsYHQ/s1600/slider-4-min.png');
+            "
+          ></div>
+          <noscript>
+            <div
+              class="sldIm"
+              style="
+                background-image: url(https://1.bp.blogspot.com/-Q_BGkGuukLE/YF1Q67reH4I/AAAAAAAAQlk/jXe6LIyIjkkNpJu7ShtztoUWV4JylmCkgCNcBGAsYHQ/s1600/slider-4-min.png);
+              "
+            ></div>
+          </noscript>
+        </div>
+        <div class="sldS"></div>
       </div>
     </div>
-  </div>
-  <div class="wrapper d-flex flex-column flex-row-fluid mt-5 mt-lg-12" data-kt-scroll="true"
-    data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-min-height="auto"
-    data-kt-scroll-dependencies="#kt_header" data-kt-scroll-wrappers="#kt_aside" data-kt-scroll-offset="5px"
-    id="kt_wrapper" style="min-height: 790px;">
-    <div class="content flex-column-fluid lh-lg" id="kt_content">
-      <div class="toolbar d-flex flex-stack flex-wrap mb-5 mb-lg-7" id="kt_toolbar">
-        <div class="page-title d-flex flex-stack flex-grow-1 py-1">
-          <h1 class="d-flex align-items-center p-0 my-1"><span class="text-dark fw-bolder fs-1"> All Questions
-            </span><small class="text-muted fs-6 fw-bold ms-1"> (2999) </small></h1>
+    <!-- bat dau bai viet tu day -->
+    <div class="section" id="top-widget">
+      <div class="widget HTML" data-version="2" id="HTML92">
+        <div class="widget-content">
+          <div class="adB" data-text="Ads go here"></div>
         </div>
       </div>
-      <!-- danh sách bài đăng -->
-      <div class="post" id="kt_post">
-        <app-article-list [limit]="10" [config]="listConfig"></app-article-list>
-      </div>
-
-
-    </div>
-  </div>
-  <div class="sidebar p-5 px-lg-0 py-lg-11" data-kt-drawer="true" data-kt-drawer-name="sidebar"
-    data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="275px"
-    data-kt-drawer-direction="end" data-kt-drawer-toggle="#kt_sidebar_toggle">
-    <div class="card hover-bg mb-5 mb-lg-10 shadow-none border-0">
-      <div class="card-header align-items-center border-0">
-        <h3 class="card-title fw-bolder text-gray-900 fs-3">Tags</h3>
-      </div>
-      <div class="card-body pt-0">
-        <div class="d-flex align-items-center mb-7"><span class="svg-icon svg-icon-2 mt-0 me-3"><svg
-              xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="black"></rect>
-              <path
-                d="M11.9343 12.5657L9.53696 14.963C9.22669 15.2733 9.18488 15.7619 9.43792 16.1204C9.7616 16.5789 10.4211 16.6334 10.8156 16.2342L14.3054 12.7029C14.6903 12.3134 14.6903 11.6866 14.3054 11.2971L10.8156 7.76582C10.4211 7.3666 9.7616 7.42107 9.43792 7.87962C9.18488 8.23809 9.22669 8.72669 9.53696 9.03696L11.9343 11.4343C12.2467 11.7467 12.2467 12.2533 11.9343 12.5657Z"
-                fill="black"></path>
-            </svg></span><a class="text-hover-primary fs-6 fw-bold text-gray-800" [hidden]="!listConfig.filters.tag"> {{
-            listConfig.filters.tag }} </a>
+      <div class="widget FeaturedPost" data-version="2" id="FeaturedPost1">
+        <h2 class="title">Pinned Post</h2>
+        <div class="itemFt" role="feed">
+          <article class="itm">
+            <div class="iThmb pThmb">
+              <a
+                class="thmb"
+                href="https://medianui-anhtuanblog.blogspot.com/2021/10/all-typography-and-writing-formats.html"
+              >
+                <img
+                  alt="All Typography and Writing Formats"
+                  class="imgThm lazy"
+                  data-src="https://4.bp.blogspot.com/-gPITOUcub9k/YCn4kfxAt9I/AAAAAAAAQW8/mRfiBRLQfC06xF4RxomLKnFCu4frf_KYgCNcBGAsYHQ/w600-h300-p-k-no-nu/imagz-all-style.png"
+                  src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                />
+                <noscript
+                  ><img
+                    alt="All Typography and Writing Formats"
+                    class="imgThm"
+                    src="https://4.bp.blogspot.com/-gPITOUcub9k/YCn4kfxAt9I/AAAAAAAAQW8/mRfiBRLQfC06xF4RxomLKnFCu4frf_KYgCNcBGAsYHQ/w600-h300-p-k-no-nu/imagz-all-style.png"
+                /></noscript>
+              </a>
+            </div>
+            <div class="iCtnt">
+              <div class="pHdr pSml">
+                <div class="pLbls" data-text="in">
+                  <a
+                    aria-label="Features"
+                    data-text="Features"
+                    href="https://medianui-anhtuanblog.blogspot.com/search/label/Features"
+                    rel="tag"
+                  >
+                  </a>
+                </div>
+              </div>
+              <h3 class="pTtl aTtl">
+                <a
+                  href="https://medianui-anhtuanblog.blogspot.com/2021/10/all-typography-and-writing-formats.html"
+                  >All Typography and Writing Formats</a
+                >
+              </h3>
+              <div class="pSnpt">
+                Not all of the styles below can be used directly in
+                &quot;Writing view&quot; mode, but there are also some features
+                that can only be used from &quot;&#8230;
+              </div>
+              <div class="pInf pSml">
+                <time
+                  class="aTtmp pTtmp pbl"
+                  data-text="Oct 28, 2021"
+                  datetime="2021-10-28T15:18:00+07:00"
+                  title="Published: October 28, 2021"
+                ></time>
+                <a
+                  aria-label="Read more"
+                  class="pJmp"
+                  data-text="Keep reading"
+                  href="https://medianui-anhtuanblog.blogspot.com/2021/10/all-typography-and-writing-formats.html"
+                ></a>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </div>
-    <div class="card card-flush border-0 card-p-0">
-      <div class="card-body pt-0"><a href="https://keenthemes.com/products/templates-mega-bundle"><img
-            src="https://devs.keenthemes.com/assets/media/banners/mega-bundle.png" class="card-rounded w-100"
-            alt="volume"></a></div>
+    <div class="section" id="main-widget">
+      <div class="widget HTML" data-version="2" id="HTML93">
+        <div class="widget-content">
+          <div class="adB" data-text="Ads go here"></div>
+        </div>
+      </div>
+      <app-article-list [limit]="9" [config]="listConfig"></app-article-list>
     </div>
-  </div>
+    <div class="section" id="add-widget">
+      <div class="widget HTML" data-version="2" id="HTML94">
+        <div class="widget-content">
+          <div class="adB" data-text="Ads go here"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!--[ Sidebar content ]-->
+  <app-sidebar></app-sidebar>
 </div>

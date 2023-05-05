@@ -8,7 +8,8 @@ import {
   Comment,
   CommentsService,
   User,
-  UserService
+  UserService,
+  PopularPostService
 } from '../core';
 
 @Component({
@@ -26,13 +27,17 @@ export class ArticleComponent implements OnInit {
   isSubmitting = false;
   isDeleting = false;
 
+  articleId: string;
+  urlEncodedLink: string;
+
   constructor(
     private route: ActivatedRoute,
     private articlesService: ArticlesService,
     private commentsService: CommentsService,
     private router: Router,
     private userService: UserService,
-    private cd: ChangeDetectorRef
+    private cd: ChangeDetectorRef,
+    private popularPostService: PopularPostService,
   ) { }
 
   ngOnInit() {
@@ -56,6 +61,16 @@ export class ArticleComponent implements OnInit {
         this.cd.markForCheck();
       }
     );
+    // load popularPosts
+    this.popularPostService.savePopularPosts(this.article);
+
+    // Lấy articleId từ URL
+    this.route.params.subscribe(params => {
+      this.articleId = params['id'];
+    });
+
+    // Tạo link share Facebook bằng cách lấy URL trực tiếp từ trình duyệt
+    this.urlEncodedLink = encodeURIComponent(window.location.href);
   }
 
   onToggleFavorite(favorited: boolean) {

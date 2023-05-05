@@ -1,7 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { ArticleListConfig, TagsService, UserService } from '../core';
+import { Article, ArticleListConfig, PopularPostService, TagsService, UserService } from '../core';
 
 @Component({
   selector: 'app-home-page',
@@ -14,7 +14,8 @@ export class HomeComponent implements OnInit {
     private router: Router,
     private tagsService: TagsService,
     private userService: UserService,
-    private cd: ChangeDetectorRef
+    private cd: ChangeDetectorRef,
+
   ) {}
 
   isAuthenticated: boolean;
@@ -24,7 +25,7 @@ export class HomeComponent implements OnInit {
   };
   tags: Array<string> = [];
   tagsLoaded = false;
-
+ 
   ngOnInit() {
     this.userService.isAuthenticated.subscribe(
       (authenticated) => {
@@ -46,6 +47,7 @@ export class HomeComponent implements OnInit {
       this.tagsLoaded = true;
       this.cd.markForCheck();
     });
+    
   }
   logout() {
     this.userService.purgeAuth();
