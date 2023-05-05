@@ -9,6 +9,7 @@ import { FavoriteButtonComponent, FollowButtonComponent } from './buttons';
 import { ListErrorsComponent } from './list-errors.component';
 import { ShowAuthedDirective } from './show-authed.directive';
 import { LoadingComponent } from './loading/loading.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
   imports: [
@@ -26,7 +27,8 @@ import { LoadingComponent } from './loading/loading.component';
     FollowButtonComponent,
     ListErrorsComponent,
     ShowAuthedDirective,
-    LoadingComponent
+    LoadingComponent,
+    SidebarComponent
   ],
   exports: [
     ArticleListComponent,
@@ -40,7 +42,8 @@ import { LoadingComponent } from './loading/loading.component';
     HttpClientModule,
     ListErrorsComponent,
     RouterModule,
-    ShowAuthedDirective
+    ShowAuthedDirective,
+    SidebarComponent
   ]
 })
 export class SharedModule {}

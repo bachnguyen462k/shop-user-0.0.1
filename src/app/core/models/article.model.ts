@@ -11,5 +11,5 @@ export interface Article {
   favorited: boolean;
   favoritesCount: number;
   author: Profile;
-  totalCmt: number;
+  imageUrl:string;
 }
