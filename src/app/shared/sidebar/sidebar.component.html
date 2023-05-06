@@ -7,8 +7,9 @@
             <article class="itm mostP pTag" *ngIf="popularPostNew">
               <div class="iThmb pThmb">
                 <a
+                title="{{ popularPostNew.title }}"
                   class="thmb"
-                  href="https://medianui-anhtuanblog.blogspot.com/2021/10/post-with-product-view.html"
+                  [routerLink]="['/article', popularPostNew?.slug]"
                 >
                   <img
                     alt="Image - Default"
@@ -44,10 +45,11 @@
                       let tag of popularPostNew.tagList;
                       trackBy: trackByFn
                     "
-                   
-                    [attr.data-text]="tag"
+                    [routerLink]="['/article', popularPostNew?.slug]"
                     rel="tag"
+                    title="{{ tag }}"
                   >
+                  {{tag}}
                   </a>
                 </div>
               </div>
