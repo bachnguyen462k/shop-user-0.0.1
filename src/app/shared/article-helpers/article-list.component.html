@@ -21,7 +21,7 @@
     >
     </app-article-preview>
   </div>
-  <div class="blogPg" id="blogPager" [hidden]="loading || totalPages.length <= 1">
+  <!-- <div class="blogPg" id="blogPager" [hidden]="loading || totalPages.length <= 1">
     <a
     [ngClass]="{ active: pageNumber === currentPage }"
     *ngFor="let pageNumber of totalPages; trackBy: trackByFn"
@@ -29,7 +29,7 @@
       class="jsLd"
       data-text="Load more posts"
       (click)="setPageTo(pageNumber)"></a>
-  </div>
+  </div> -->
 </div>
 
 <div class="blogPg" id="blogPager">
