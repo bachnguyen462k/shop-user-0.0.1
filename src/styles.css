@@ -3806,7 +3806,7 @@
         }
         .bD:not(.hdMn) .navI:checked ~ .mainWrp .mnMn .a,
         .hdMn .navI:not(:checked) ~ .mainWrp .mnMn .a {
-          max-width: 40px;
+          max-width: 100%;
           border-radius: 15px;
         }
         .bD:not(.hdMn) .navI:checked ~ .mainWrp .mnMn .drp.mr,
