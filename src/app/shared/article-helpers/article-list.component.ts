@@ -72,6 +72,16 @@ export class ArticleListComponent {
       this.updateDisplayedPages();
     });
     // window.scrollTo({ top: 0, behavior: 'smooth' });
-    
+
   }
+  loadMore() {
+    this.currentPage++;
+    this.runQuery();
+  }
+  
+  get showLoadMoreButton() {
+    return this.currentPage < this.totalPages.length;
+  }
+  
+  
 }

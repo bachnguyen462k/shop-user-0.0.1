@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
     type: 'all',
     filters: {}
   };
-  tags: Array<string> = [];
+  // tags: Array<string> = [];
   tagsLoaded = false;
 
   ngOnInit() {
@@ -41,12 +41,12 @@ export class HomeComponent implements OnInit {
       }
     );
 
-    this.tagsService.getAll()
-    .subscribe(tags => {
-      this.tags = tags;
-      this.tagsLoaded = true;
-      this.cd.markForCheck();
-    });
+    // this.tagsService.getAll()
+    // .subscribe(tags => {
+    //   this.tags = tags;
+    //   this.tagsLoaded = true;
+    //   this.cd.markForCheck();
+    // });
 
   }
   logout() {

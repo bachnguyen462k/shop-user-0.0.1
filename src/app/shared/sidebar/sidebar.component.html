@@ -83,98 +83,39 @@
           </div>
         </div>
         <div class="widget Label" data-version="2" id="Label00">
-          <h3 class="title">Labels</h3>
+          <h3 class="title">Tags</h3>
           <div class="wL pSml bg cl">
-            <div class="lbSz s-4">
-              <a
-                aria-label="Comments"
-                class="lbN"
-                href="https://medianui-anhtuanblog.blogspot.com/search/label/Comments"
-              >
-                <span class="lbT">Comments</span>
-                <span class="lbC" data-text="(3)"></span>
-              </a>
-            </div>
-            <div class="lbSz s-3">
+            <div class="lbSz s-1" *ngFor="let item of tags1">
               <a
                 aria-label="Disqus"
                 class="lbN"
-                href="https://medianui-anhtuanblog.blogspot.com/search/label/Disqus"
               >
-                <span class="lbT">Disqus</span>
-                <span class="lbC" data-text="(2)"></span>
-              </a>
-            </div>
-            <div class="lbSz s-1">
-              <a
-                aria-label="FB"
-                class="lbN"
-                href="https://medianui-anhtuanblog.blogspot.com/search/label/FB"
-              >
-                <span class="lbT">FB</span>
-                <span class="lbC" data-text="(1)"></span>
-              </a>
-            </div>
-            <div class="lbSz s-5">
-              <a
-               
-                class="lbN"
-                href="https://medianui-anhtuanblog.blogspot.com/search/label/Features"
-              >
-                <span class="lbT">Features</span>
-                <span class="lbC" data-text="(5)"></span>
-              </a>
-            </div>
-            <div class="lbSz s-1">
-              <a
-                aria-label="Fullpage"
-                class="lbN"
-                href="https://medianui-anhtuanblog.blogspot.com/search/label/Fullpage"
-              >
-                <span class="lbT">Fullpage</span>
-                <span class="lbC" data-text="(1)"></span>
-              </a>
-            </div>
-            <div class="lbSz s-3">
-              <a
-                aria-label="Preview"
-                class="lbN"
-                href="https://medianui-anhtuanblog.blogspot.com/search/label/Preview"
-              >
-                <span class="lbT">Preview</span>
+                <span class="lbT">{{item}}</span>
                 <span class="lbC" data-text="(2)"></span>
               </a>
             </div>
             <div class="lbSh">
               <input class="lbIn hidden" id="lbAl-1" type="checkbox" />
-              <div class="lbAl">
+              
+              <div class="lbAl" >
+                <ng-container *ngFor="let item of tags2">
                 <div class="lbSz s-1">
                   <a
                     aria-label="Product"
                     class="lbN"
-                    href="https://medianui-anhtuanblog.blogspot.com/search/label/Product"
                   >
-                    <span class="lbT">Product</span>
+                    <span class="lbT">{{item}}</span>
                     <span class="lbC" data-text="(1)"></span>
                   </a>
                 </div>
-                <div class="lbSz s-1">
-                  <a
-                    aria-label="Sponsored"
-                    class="lbN"
-                    href="https://medianui-anhtuanblog.blogspot.com/search/label/Sponsored"
-                  >
-                    <span class="lbT">Sponsored</span>
-                    <span class="lbC" data-text="(1)"></span>
-                  </a>
-                </div>
+              </ng-container>
               </div>
-              <label
+              <label *ngIf="+count >0"
                 aria-label="Show labels"
                 class="lbM"
                 data-hide="Show less"
                 data-show="Show more"
-                data-text="(+2)"
+                [attr.data-text]="count"
                 for="lbAl-1"
               ></label>
             </div>
