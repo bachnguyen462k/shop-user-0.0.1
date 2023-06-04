@@ -1,7 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { Article, ArticleListConfig, PopularPostService, TagsService, UserService } from '../core';
+import { Article, ArticleListConfig, ArticlesService, PopularPostService, TagsService, UserService } from '../core';
 
 @Component({
   selector: 'app-home-page',
@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit {
     private tagsService: TagsService,
     private userService: UserService,
     private cd: ChangeDetectorRef,
+    private articlesService: ArticlesService,
 
   ) {}
 
@@ -25,7 +26,8 @@ export class HomeComponent implements OnInit {
   };
   // tags: Array<string> = [];
   tagsLoaded = false;
-
+  article: Article;
+  
   ngOnInit() {
     this.userService.isAuthenticated.subscribe(
       (authenticated) => {
@@ -41,13 +43,12 @@ export class HomeComponent implements OnInit {
       }
     );
 
-    // this.tagsService.getAll()
-    // .subscribe(tags => {
-    //   this.tags = tags;
-    //   this.tagsLoaded = true;
-    //   this.cd.markForCheck();
-    // });
-
+    this.articlesService.getView()
+    .subscribe(view => {
+      this.article = view;
+      this.tagsLoaded = true;
+      this.cd.markForCheck();
+    });
   }
   logout() {
     this.userService.purgeAuth();

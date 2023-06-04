@@ -2,7 +2,7 @@
   <!--[ Main content ]-->
   <main class="blogItm mainbar">
     <!-- chay silde -->
-    <div class="sldO scrlH section" id="slider-widget">
+    <!-- <div class="sldO scrlH section" id="slider-widget">
       <div class="widget Image" data-version="2" id="Image1">
         <div class="sldC" id="Image1_img">
           <div
@@ -87,7 +87,7 @@
         </div>
         <div class="sldS"></div>
       </div>
-    </div>
+    </div> -->
     <!-- bat dau bai viet tu day -->
     <div class="section" id="top-widget">
       <!-- <div class="widget HTML" data-version="2" id="HTML92">
@@ -96,26 +96,20 @@
         </div>
       </div> -->
       <div class="widget FeaturedPost" data-version="2" id="FeaturedPost1">
-        <!-- <h2 class="title">Pinned Post</h2> -->
-        <!-- <div class="itemFt">
+        <h2 class="title">Xem nhiều nhất</h2>
+        <div class="itemFt">
           <article class="itm">
             <div class="iThmb pThmb">
               <a
                 class="thmb"
-                href="https://medianui-anhtuanblog.blogspot.com/2021/10/all-typography-and-writing-formats.html"
+                [routerLink]="['/', article?.slug]"
               >
                 <img
                   alt="All Typography and Writing Formats"
                   class="imgThm lazy"
-                  data-src="https://4.bp.blogspot.com/-gPITOUcub9k/YCn4kfxAt9I/AAAAAAAAQW8/mRfiBRLQfC06xF4RxomLKnFCu4frf_KYgCNcBGAsYHQ/w600-h300-p-k-no-nu/imagz-all-style.png"
-                  src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                  [src]="article.imageUrl"
+                  lazied=""
                 />
-                <noscript
-                  ><img
-                    alt="All Typography and Writing Formats"
-                    class="imgThm"
-                    src="https://4.bp.blogspot.com/-gPITOUcub9k/YCn4kfxAt9I/AAAAAAAAQW8/mRfiBRLQfC06xF4RxomLKnFCu4frf_KYgCNcBGAsYHQ/w600-h300-p-k-no-nu/imagz-all-style.png"
-                /></noscript>
               </a>
             </div>
             <div class="iCtnt">
@@ -130,32 +124,33 @@
               </div>
               <h3 class="pTtl aTtl">
                 <a
-                  href="https://medianui-anhtuanblog.blogspot.com/2021/10/all-typography-and-writing-formats.html"
-                  >All Typography and Writing Formats</a
+                [routerLink]="['/', article?.slug]"
+                  >{{article.title}}</a
                 >
               </h3>
               <div class="pSnpt">
-                Not all of the styles below can be used directly in
-                &quot;Writing view&quot; mode, but there are also some features
-                that can only be used from &quot;&#8230;
+                {{ article.description }}
+                &#8230;
+              </div>
+              <div class="pSnpt">
+                Lượt xem:  {{ article.view }}
               </div>
               <div class="pInf pSml">
-                <time
-                  class="aTtmp pTtmp pbl"
-                  data-text="Oct 28, 2021"
-                  datetime="2021-10-28T15:18:00+07:00"
-                  title="Published: October 28, 2021"
-                ></time>
+                  <time
+                    class="aTtmp pTtmp pbl"
+                    [attr.data-text]="article.createdAt"
+                    [attr.datetime]="article.createdAt"
+                    [attr.title]="'Published: ' + article.createdAt"
+                  ></time>
                 <a
                   aria-label="Read more"
                   class="pJmp"
-                  data-text="Keep reading"
-                  href="https://medianui-anhtuanblog.blogspot.com/2021/10/all-typography-and-writing-formats.html"
+                  [routerLink]="['/', article?.slug]"
                 ></a>
               </div>
             </div>
           </article>
-        </div> -->
+        </div>
       </div>
     </div>
     <div class="section" id="main-widget">

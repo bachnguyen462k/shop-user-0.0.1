@@ -61,4 +61,9 @@ export class ArticlesService {
   }
 
 
+  getView(): Observable<Article> {
+    return this.apiService.get('/articles/byView')
+      .pipe(map(data => data.article));
+  }
+
 }
