@@ -66,4 +66,10 @@ export class ArticlesService {
       .pipe(map(data => data.article));
   }
 
+
+  getByCategory(category): Observable<{articles: Article[], articlesCount: number}> {
+    return this.apiService
+    .get('/articles/getByCategory/'+category);
+  }
+
 }

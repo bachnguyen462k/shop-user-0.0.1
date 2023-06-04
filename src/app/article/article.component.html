@@ -167,7 +167,7 @@
         </div>
       </div>
     </div>
-
+    
 
 
     <div class="toc">
@@ -179,9 +179,75 @@
       </ul>
     </div>
     
-    
+    <aside class="blogItm ">
+      <div class="sideIn">
+        <div class="section" id="side-widget">
+          <div class="widget PopularPosts" data-version="2" id="PopularPosts00">
+            <h2 class="title">Bài viết liên quan</h2>
+            <div class="itemFt">
+              <article class="itm">
+                <div class="iThmb pThmb">
+                  <a
+                    class="thmb"
+                    [routerLink]="['/', article?.slug]"
+                  >
+                    <img
+                      alt="All Typography and Writing Formats"
+                      class="imgThm lazy"
+                      [src]="article.imageUrl"
+                      lazied=""
+                    />
+                  </a>
+                </div>
+                <div class="iCtnt">
+                  <div class="pHdr pSml">
+                    <div class="pLbls">
+                      <a
+                      [routerLink]="['/', article?.slug]"
+                        rel="tag"
+                      >
+                      </a>
+                    </div>
+                  </div>
+                  <h3 class="pTtl aTtl">
+                    <a
+                    [routerLink]="['/', article?.slug]"
+                      >{{article.title}}</a
+                    >
+                  </h3>
+                  <div class="pSnpt">
+                    {{ article.description }}
+                    &#8230;
+                  </div>
+                  <div class="pSnpt">
+                    Lượt xem:  {{ article.view }}
+                  </div>
+                  <div class="pInf pSml">
+                      <time
+                        class="aTtmp pTtmp pbl"
+                        [attr.data-text]="article.createdAt"
+                        [attr.datetime]="article.createdAt"
+                        [attr.title]="'Published: ' + article.createdAt"
+                      ></time>
+                    <a
+                      aria-label="Read more"
+                      class="pJmp"
+                      [routerLink]="['/', article?.slug]"
+                    ></a>
+                  </div>
+                </div>
+              </article>
+              <br>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
   </main>
   <!--[ Sidebar content ]-->
   <app-sidebar></app-sidebar>
+
+  
 </div>
 
