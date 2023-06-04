@@ -9,7 +9,7 @@
                 <a
                 title="{{ popularPostNew.title }}"
                   class="thmb"
-                  [routerLink]="['/article', popularPostNew?.slug]"
+                  [routerLink]="['/', popularPostNew?.slug]"
                 >
                   <img
                     alt="Image - Default"
@@ -38,7 +38,7 @@
                       let tag of popularPostNew.tagList;
                       trackBy: trackByFn
                     "
-                    [routerLink]="['/article', popularPostNew?.slug]"
+                    [routerLink]="['/', popularPostNew?.slug]"
                     rel="tag"
                     title="{{ tag }}"
                   >
@@ -49,7 +49,7 @@
               <div class="iCtnt">
                 <div class="iInr">
                   <h3 class="iTtl aTtl">
-                    <a [routerLink]="['/article', popularPostNew?.slug]">{{
+                    <a [routerLink]="['/', popularPostNew?.slug]">{{
                       popularPostNew.title
                     }}</a>
                   </h3>
@@ -72,7 +72,7 @@
                 <div class="iCtnt">
                   <div class="iInr">
                     <h3 class="iTtl aTtl">
-                      <a [routerLink]="['/article', item?.slug]">{{
+                      <a [routerLink]="['/', item?.slug]">{{
                         item.title
                       }}</a>
                     </h3>
