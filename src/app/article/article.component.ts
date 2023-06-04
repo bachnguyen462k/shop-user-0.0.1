@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef, Renderer2 } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -11,6 +11,7 @@ import {
   UserService,
   PopularPostService
 } from '../core';
+import slugify from 'slugify';
 
 @Component({
   selector: 'app-article-page',
@@ -29,7 +30,7 @@ export class ArticleComponent implements OnInit {
 
   articleId: string;
   urlEncodedLink: string;
-
+  headings: { text: string; level: number; slug: string }[] = [];
   constructor(
     private route: ActivatedRoute,
     private articlesService: ArticlesService,
@@ -38,6 +39,7 @@ export class ArticleComponent implements OnInit {
     private userService: UserService,
     private cd: ChangeDetectorRef,
     private popularPostService: PopularPostService,
+    private renderer: Renderer2
   ) { }
 
   ngOnInit() {
@@ -71,6 +73,23 @@ export class ArticleComponent implements OnInit {
 
     // Tạo link share Facebook bằng cách lấy URL trực tiếp từ trình duyệt
     this.urlEncodedLink = encodeURIComponent(window.location.href);
+
+
+    // lay menu
+    const parser = new DOMParser();
+    const htmlDoc = parser.parseFromString(this.article.body, 'text/html');
+    const headingElements = htmlDoc.querySelectorAll('h1, h2, h3');
+
+    headingElements.forEach((heading: HTMLElement) => {
+      const text = heading.innerText;
+      const level = parseInt(heading.tagName.slice(1));
+      const slug = slugify(text, { lower: true, strict: true });
+      this.headings.push({ text, level, slug });
+    });
+
+    console.log(this.headings); // Print the headings array
+
+
   }
 
   onToggleFavorite(favorited: boolean) {
@@ -142,4 +161,13 @@ export class ArticleComponent implements OnInit {
       );
   }
 
+
+  scrollToElement(heading: any) {
+    const targetElement = document.querySelector(`#${heading.slug}`);
+
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+  
 }

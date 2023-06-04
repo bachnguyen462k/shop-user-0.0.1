@@ -167,7 +167,21 @@
         </div>
       </div>
     </div>
+
+
+
+    <div class="toc">
+      <h3>Mục lục</h3>
+      <ul>
+        <li *ngFor="let heading of headings">
+          <a (click)="scrollToElement(heading)">{{ heading.text }}</a>
+        </li>
+      </ul>
+    </div>
+    
+    
   </main>
   <!--[ Sidebar content ]-->
   <app-sidebar></app-sidebar>
 </div>
+

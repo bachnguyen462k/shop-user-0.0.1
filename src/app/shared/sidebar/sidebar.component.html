@@ -14,16 +14,9 @@
                   <img
                     alt="Image - Default"
                     class="imgThm lazy loaded"
-                    data-src="{{ popularPostNew?.image }}"
-                    src="{{ popularPostNew?.image }}"
+                    [src]="popularPostNew.imageUrl"
                     lazied=""
                   />
-                  <noscript
-                    ><img
-                      alt="Image - Default"
-                      class="imgThm"
-                      src="https://4.bp.blogspot.com/-OhiwDawFr6I/YJyEqW7fpXI/AAAAAAAAQr8/Pbr9BeN0BPsXw4CVVta1q_6c-vOBlT1gwCNcBGAsYHQ/w600-h300-p-k-no-nu/median-product.png"
-                  /></noscript>
                 </a>
                 <div class="iFxd">
                   <div class="spnr">
@@ -189,10 +182,10 @@
         </div>
       </div>
       <!--[ Sidebar sticky ]-->
-      <div class="sideSticky section" id="side-sticky">
+      <!-- <div class="sideSticky section" id="side-sticky">
         <div class="widget HTML" data-version="2" id="HTML95">
           <div class="adB" data-text="Ads go here"></div>
         </div>
-      </div>
+      </div> -->
     </div>
   </aside>
