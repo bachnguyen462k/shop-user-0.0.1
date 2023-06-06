@@ -1,7 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef, Renderer2 } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-
+import * as moment from 'moment';
 import {
   Article,
   ArticlesService,
@@ -27,7 +27,7 @@ export class ArticleComponent implements OnInit {
   commentFormErrors = {};
   isSubmitting = false;
   isDeleting = false;
-
+  createTime: string='';
   articleId: string;
   urlEncodedLink: string;
   headings: { text: string; level: number; slug: string }[] = [];
@@ -47,7 +47,23 @@ export class ArticleComponent implements OnInit {
     this.route.data.subscribe(
       (data: { article: Article }) => {
         this.article = data.article;
-
+        /// format này hiển thị 
+        const createdAt = moment(this.article.createdAt); // Trường ngày tạo của bài viết
+        const currentTime = moment();
+        const postedTime = createdAt.subtract(2, 'hours'); // Sử dụng trường ngày tạo
+        const timeDiff = currentTime.diff(postedTime, 'minutes');
+        console.log(timeDiff);
+        
+        if (timeDiff < 60) {
+          this.createTime =`Đã đăng cách đây ${timeDiff} phút`;
+          console.log(`Đã đăng cách đây ${timeDiff} phút`);
+        } else if (timeDiff < 1440) {
+          const hoursDiff = Math.floor(timeDiff / 60);
+          this.createTime =`Đã đăng cách đây ${hoursDiff} giờ`;
+        } else {
+          const daysDiff = Math.floor(timeDiff / 1440);
+          this.createTime =`Đã đăng cách đây ${daysDiff} ngày`;
+        }
         // Load the comments on this article
         this.populateComments();
         this.cd.markForCheck();
@@ -169,5 +185,5 @@ export class ArticleComponent implements OnInit {
       targetElement.scrollIntoView({ behavior: 'smooth' });
     }
   }
-  
+
 }

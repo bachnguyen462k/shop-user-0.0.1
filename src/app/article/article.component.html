@@ -35,26 +35,19 @@
           "
           lazied
         ></div>
-        <noscript>
-          <div
-            class="im"
-            style="
-              background-image: url(//3.bp.blogspot.com/-gLkGtfXLfi4/YPTNgj9GoBI/AAAAAAAAAns/fTh4PgoeNRQU69pW9FMetXJ4yJzLlZFIgCK4BGAYYCw/w40-h40-p-k-no-nu/avt-1.jpeg);
-            "
-          ></div>
-        </noscript>
       </div>
       <div class="pNm">
         <bdi class="nm" data-write="Oleh"> {{ article.author.username }} </bdi>
         <div class="pDr">
           <bdi class="pDt pIn">
             <time
-              title="Published: {{ article.createdAt | date : 'longDate' }}"
-            >
-              {{ article.createdAt | date : "mediumDate" }}
-            </time>
+                    class="aTtmp pTtmp pbl"
+                    [attr.data-text]="article.createdAt"
+                    [attr.datetime]="article.createdAt"
+                    [attr.title]="'Published: ' + article.createdAt"
+                  ></time>
           </bdi>
-          <div class="pRd pIn"><bdi id="rdTime">2 min read</bdi></div>
+          <div class="pRd pIn"><bdi id="rdTime">{{ article.timeRead }} </bdi></div>
         </div>
       </div>
       <div class="pCm">
@@ -93,12 +86,6 @@
                       src="{{ article?.imageUrl }}"
                       lazied=""
                     />
-                    <noscript
-                      ><img
-                        alt="Image - Default"
-                        class="imgThm"
-                        src="https://4.bp.blogspot.com/-algkDmAuKPc/YIIdGss3QZI/AAAAAAAAQps/rr13RZk3qMoPX9652y7maT2f0TxJ4avVgCNcBGAsYHQ/w600-h300-p-k-no-nu/fletro-sponsored.png"
-                    /></noscript>
                   </div>
                 </td>
               </tr>
@@ -110,6 +97,7 @@
       </div>
       <div class="pAd"></div>
       <div class="pSh">
+        
         <div class="pShc" data-text="Share:">
           <a
             aria-label="Facebook"
