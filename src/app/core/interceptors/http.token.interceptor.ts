@@ -13,13 +13,15 @@ export class HttpTokenInterceptor implements HttpInterceptor {
       'Content-Type': 'application/json',
       'Accept': 'application/json'
     };
-
+// Lấy chiều cao của cửa sổ trình duyệt
+var windowHeight = window.innerHeight;
+var windowWidtch = window.innerWidth;
     const token = this.jwtService.getToken();
 
     if (token) {
-      headersConfig['Authorization'] = `Token ${token}`;
+      headersConfig['Authorization'] = `Token ${token}`; 
     }
-
+    headersConfig['SizeScreen']=windowHeight+"x"+windowWidtch
     const request = req.clone({ setHeaders: headersConfig });
     return next.handle(request);
   }

@@ -5,11 +5,12 @@ import { ArticleCommentComponent } from './article-comment.component';
 import { MarkdownPipe } from './markdown.pipe';
 import { SharedModule } from '../shared';
 import { ArticleRoutingModule } from './article-routing.module';
-
+import { ScrollSpyModule } from 'ngx-scrollspy';
 @NgModule({
   imports: [
     SharedModule,
-    ArticleRoutingModule
+    ArticleRoutingModule,
+    ScrollSpyModule
   ],
   declarations: [
     ArticleComponent,

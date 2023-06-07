@@ -14,4 +14,5 @@ export interface Article {
   imageUrl:string;
   view:number;
   timeRead:string;
+  mucluc: string[];
 }

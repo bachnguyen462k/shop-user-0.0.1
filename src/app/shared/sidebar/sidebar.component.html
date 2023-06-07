@@ -82,6 +82,7 @@
             </div>
           </div>
         </div>
+        
         <div class="widget Label" data-version="2" id="Label00">
           <h3 class="title">Tags</h3>
           <div class="wL pSml bg cl">
@@ -118,6 +119,24 @@
                 [attr.data-text]="count"
                 for="lbAl-1"
               ></label>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="widget PopularPosts" data-version="2" id="PopularPosts00" *ngIf="mucluc.length >0">
+          <h2 class="title">Mục lục</h2>
+          <div class="itemPp">
+            <div *ngFor="let item of mucluc">
+              <article >
+                <div >
+                  <div >
+                    <h3 class="iTtl aTtl">
+                     {{item}} 
+                    </h3>
+                  </div>
+                </div>
+              </article>
             </div>
           </div>
         </div>

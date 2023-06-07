@@ -29,6 +29,7 @@
     "marked": "^4.0.14",
     "moment": "^2.29.4",
     "ngx-quicklink": "^0.2.7",
+    "ngx-scrollspy": "^1.2.1",
     "rxjs": "^7.5.5",
     "slugify": "^1.6.6",
     "tslib": "^2.3.1",
