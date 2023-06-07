@@ -67,9 +67,6 @@ export class ArticlesService {
   }
 
 
-  getByCategory(category): Observable<{articles: Article[], articlesCount: number}> {
-    return this.apiService
-    .get('/articles/getByCategory/'+category);
-  }
+
 
 }
