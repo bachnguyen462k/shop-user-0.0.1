@@ -22,7 +22,8 @@ var windowWidtch = window.innerWidth;
     if (token) {
       headersConfig['Authorization'] = `Token ${token}`; 
     }
-    headersConfig['RequestId'] = uuidv4();; 
+    headersConfig['RequestId'] = uuidv4();
+    headersConfig['Role'] = "User"; 
     headersConfig['SizeScreen']=windowHeight+"x"+windowWidtch
     const request = req.clone({ setHeaders: headersConfig });
     return next.handle(request);
