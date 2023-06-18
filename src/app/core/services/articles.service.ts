@@ -67,6 +67,20 @@ export class ArticlesService {
   }
 
 
+  search(config: ArticleListConfig): Observable<{articles: Article[], articlesCount: number}> {
+    // Convert any filters over to Angular's URLSearchParams
+    const params = {};
 
+    Object.keys(config.filters)
+    .forEach((key) => {
+      params[key] = config.filters[key];
+    });
+
+    return this.apiService
+    .get(
+      '/search',
+      new HttpParams({ fromObject: params })
+    );
+  }
 
 }

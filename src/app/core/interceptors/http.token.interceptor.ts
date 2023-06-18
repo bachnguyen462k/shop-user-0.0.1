@@ -3,6 +3,7 @@ import { HttpEvent, HttpInterceptor, HttpHandler, HttpRequest } from '@angular/c
 import { Observable } from 'rxjs';
 
 import { JwtService } from '../services';
+import { v4 as uuidv4 } from 'uuid';
 
 @Injectable()
 export class HttpTokenInterceptor implements HttpInterceptor {
@@ -21,6 +22,7 @@ var windowWidtch = window.innerWidth;
     if (token) {
       headersConfig['Authorization'] = `Token ${token}`; 
     }
+    headersConfig['RequestId'] = uuidv4();; 
     headersConfig['SizeScreen']=windowHeight+"x"+windowWidtch
     const request = req.clone({ setHeaders: headersConfig });
     return next.handle(request);
