@@ -45,9 +45,11 @@
                 id="searchIn"
                 minlength="3"
                 name="q"
-                placeholder="Try &#39;Adventure&#39;"
+                placeholder="Tìm kiếm (Enter)"
                 required="required"
                 value=""
+                (keyup.enter)="onEnterKey($event)"
+                [(ngModel)]="inputValue"
               />
               <span class="sb">
                 <svg class="line" viewBox="0 0 24 24">

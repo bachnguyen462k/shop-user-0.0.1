@@ -8,6 +8,7 @@ import { User, UserService } from '../../core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderComponent implements OnInit {
+  inputValue: string;
   constructor(
     private userService: UserService,
     private cd: ChangeDetectorRef
@@ -22,5 +23,11 @@ export class HeaderComponent implements OnInit {
         this.cd.markForCheck();
       }
     );
+  }
+
+  onEnterKey(event: any) {
+    // Xử lý khi người dùng nhấn Enter
+    console.log(this.inputValue);
+    // Thực hiện các hành động khác tại đây
   }
 }
