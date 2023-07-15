@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  api_url: 'https://backend-3fki.onrender.com'
+  api_url: 'https://api.realworld.io/api'
 };
