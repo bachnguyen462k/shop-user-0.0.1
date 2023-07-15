@@ -1,5 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { User, UserService, Profile } from '../core';
 import { concatMap ,  tap } from 'rxjs/operators';
@@ -13,7 +13,8 @@ export class ProfileComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private userService: UserService,
-    private cd: ChangeDetectorRef
+    private cd: ChangeDetectorRef,
+    private router: Router,
   ) { }
 
   profile: Profile;
@@ -41,4 +42,9 @@ export class ProfileComponent implements OnInit {
     this.profile.following = following;
   }
 
+
+  logout() {
+    this.userService.purgeAuth();
+    this.router.navigateByUrl('/');
+  }  
 }

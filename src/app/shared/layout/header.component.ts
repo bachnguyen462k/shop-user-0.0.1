@@ -30,4 +30,6 @@ export class HeaderComponent implements OnInit {
     console.log(this.inputValue);
     // Thực hiện các hành động khác tại đây
   }
+
+  
 }

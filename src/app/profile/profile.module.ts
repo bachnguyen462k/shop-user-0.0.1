@@ -5,7 +5,8 @@ import { ProfileComponent } from './profile.component';
 import { ProfileFavoritesComponent } from './profile-favorites.component';
 import { SharedModule } from '../shared';
 import { ProfileRoutingModule } from './profile-routing.module';
-
+import { ProfileAddressComponent } from './profile-address.component';
+import { ProfileNotificationComponent } from './profile-notification.component';
 @NgModule({
   imports: [
     SharedModule,
@@ -14,7 +15,9 @@ import { ProfileRoutingModule } from './profile-routing.module';
   declarations: [
     ProfileArticlesComponent,
     ProfileComponent,
-    ProfileFavoritesComponent
+    ProfileFavoritesComponent,
+    ProfileAddressComponent,
+    ProfileNotificationComponent
   ],
   providers: [
   ]
