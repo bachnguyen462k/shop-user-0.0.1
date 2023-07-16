@@ -2,13 +2,14 @@ import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@
 import { ActivatedRoute, Router } from '@angular/router';
 
 import { ArticleListConfig, Profile } from '../core';
-
+import {faEye } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-profile-articles',
   templateUrl: './profile-articles.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProfileArticlesComponent implements OnInit {
+  faEye = faEye;
   constructor(
     private route: ActivatedRoute,
     private router: Router,

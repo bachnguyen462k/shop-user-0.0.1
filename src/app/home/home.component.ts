@@ -2,7 +2,6 @@ import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@
 import { Router } from '@angular/router';
 
 import { Article, ArticleListConfig, ArticlesService, PopularPostService, TagsService, UserService } from '../core';
-
 @Component({
   selector: 'app-home-page',
   templateUrl: './home.component.html',

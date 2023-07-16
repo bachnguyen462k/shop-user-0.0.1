@@ -1,13 +1,15 @@
 import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 
 import { User, UserService } from '../../core';
-
+import {faLocationDot,faCaretDown } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-layout-header',
   templateUrl: './header.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderComponent implements OnInit {
+  faLocation = faLocationDot;
+  faCaretDown = faCaretDown;
   inputValue: string;
   constructor(
     private userService: UserService,

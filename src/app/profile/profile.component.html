@@ -24,27 +24,27 @@
               <!-- nav item -->
               <li class="nav-item">
                 <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-                  [routerLink]="['/profile', profile.username, 'favorites']"><i
-                    class="feather-icon icon-settings me-2"></i>Cài đặt</a>
+                  [routerLink]="['/profile', profile.username, 'favorites']">
+                  <fa-icon [icon]="faGear"></fa-icon> Cài đặt</a>
               </li>
               <!-- nav item -->
               <li class="nav-item">
                 <a class="nav-link " aria-current="page" routerLinkActive="active"
-                  [routerLinkActiveOptions]="{ exact: true }" [routerLink]="['/profile', profile.username]"><i
-                    class="feather-icon icon-shopping-bag me-2"></i>Đơn hàng</a>
+                  [routerLinkActiveOptions]="{ exact: true }" [routerLink]="['/profile', profile.username]">
+                  <fa-icon [icon]="faShoppingCart"></fa-icon> Đơn hàng</a>
               </li>
               <!-- nav item -->
               <li class="nav-item">
                 <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-                  [routerLink]="['/profile', profile.username, 'address']"><i
-                    class="feather-icon icon-map-pin me-2"></i>Địa chỉ</a>
+                  [routerLink]="['/profile', profile.username, 'address']">
+                  <fa-icon [icon]="faAddressBook"></fa-icon> Địa chỉ</a>
               </li>
 
               <!-- nav item -->
               <li class="nav-item">
                 <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-                  [routerLink]="['/profile', profile.username, 'notification']"><i
-                    class="feather-icon icon-bell me-2"></i>Thông báo</a>
+                  [routerLink]="['/profile', profile.username, 'notification']">
+                  <fa-icon [icon]="faBell" ></fa-icon> Thông báo</a>
               </li>
               <!-- nav item -->
               <li class="nav-item">
@@ -53,7 +53,7 @@
               <!-- nav item -->
               <li class="nav-item">
                 <a class="nav-link " routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-                  (click)="logout()"><i class="feather-icon icon-log-out me-2"></i>Đăng Xuất</a>
+                  (click)="logout()"><fa-icon [icon]="faRightToBracket"></fa-icon> Đăng Xuất</a>
               </li>
             </ul>
           </div>
@@ -79,7 +79,8 @@
     <ul class="nav flex-column nav-pills nav-pills-dark">
       <!-- nav item -->
       <li class="nav-item">
-        <a class="nav-link " aria-current="page" href="account-orders.html"><i
+        <a class="nav-link " aria-current="page" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                  [routerLink]="['/profile', profile.username, 'favorites']"><i
             class="feather-icon icon-shopping-bag me-2"></i>Your Orders</a>
       </li>
       <!-- nav item -->

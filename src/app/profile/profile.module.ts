@@ -7,10 +7,12 @@ import { SharedModule } from '../shared';
 import { ProfileRoutingModule } from './profile-routing.module';
 import { ProfileAddressComponent } from './profile-address.component';
 import { ProfileNotificationComponent } from './profile-notification.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 @NgModule({
   imports: [
     SharedModule,
-    ProfileRoutingModule
+    ProfileRoutingModule,
+    FontAwesomeModule
   ],
   declarations: [
     ProfileArticlesComponent,

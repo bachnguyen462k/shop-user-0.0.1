@@ -15,9 +15,15 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { SearchModule } from './search/search.module';
 import { WishlistModule } from './wishlist/wishlist.module';
+import { AboutModule } from './about/about.module';
+import { ProductModule } from './product/product.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ContactModule } from './contact/contact.module';
+
+
 
 @NgModule({
-  declarations: [AppComponent, FooterComponent, HeaderComponent],
+  declarations: [AppComponent, FooterComponent, HeaderComponent, ],
   imports: [
     BrowserModule,
     CoreModule,
@@ -26,8 +32,12 @@ import { WishlistModule } from './wishlist/wishlist.module';
     AuthModule,
     SearchModule,
     WishlistModule,
+    ContactModule,
+    AboutModule,
+    ProductModule,
     AppRoutingModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

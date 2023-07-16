@@ -3,13 +3,19 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 import { User, UserService, Profile } from '../core';
 import { concatMap ,  tap } from 'rxjs/operators';
-
+import {faGear,faShoppingCart,faAddressBook,faBell,faRightToBracket,faIndent } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-profile-page',
   templateUrl: './profile.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProfileComponent implements OnInit {
+  faGear = faGear;
+  faShoppingCart = faShoppingCart;
+  faAddressBook = faAddressBook;
+  faBell = faBell;
+  faRightToBracket = faRightToBracket;
+  faIndent = faIndent
   constructor(
     private route: ActivatedRoute,
     private userService: UserService,
