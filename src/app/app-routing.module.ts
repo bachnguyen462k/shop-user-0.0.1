@@ -13,16 +13,20 @@ const routes: Routes = [
     loadChildren: () => import('./profile/profile.module').then(m => m.ProfileModule)
   },
   {
+    path: 'wishlist',
+    loadChildren: () => import('./wishlist/wishlist.module').then(m => m.WishlistModule)
+  },
+  {
     path: 'editor',
     loadChildren: () => import('./editor/editor.module').then(m => m.EditorModule)
   },
   {
-    path: '',
-    loadChildren: () => import('./article/article.module').then(m => m.ArticleModule)
-  },
-  {
     path: 'search',
     loadChildren: () => import('./search/search.module').then(m => m.SearchModule)
+  },
+  {
+    path: '',
+    loadChildren: () => import('./article/article.module').then(m => m.ArticleModule)
   },
 
 ];

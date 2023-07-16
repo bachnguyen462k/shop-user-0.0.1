@@ -154,13 +154,14 @@
           <!-- Button trigger modal -->
           <button type="button" class="btn btn-outline-gray-400 text-muted" data-bs-toggle="modal"
             data-bs-target="#locationModal">
-            <i class="feather-icon icon-map-pin me-2"></i>Location
+            <i class="fa-sharp fa-light fa-location-dot"></i>Location
           </button>
         </div>
         <div class="col-md-2 col-xxl-2 text-end d-none d-lg-block">
           <div class="list-inline">
             <div class="list-inline-item me-5">
-              <a href="./pages/shop-wishlist.html" class="text-muted position-relative">
+              <a [routerLink]="['/wishlist']"
+                 routerLinkActive="active" class="text-muted position-relative">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                   class="feather feather-heart">
@@ -184,7 +185,7 @@
                 </svg>
               </a>
               <ul class="dropdown-menu" *appShowAuthed="true">
-                <li><a class="dropdown-item" href="profile" [routerLink]="['/profile', currentUser.username]"
+                <li><a class="dropdown-item" href="#" [routerLink]="['/profile', currentUser.username]"
                   routerLinkActive="active">Tài khoản</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="#">Đăng Xuất</a></li>
@@ -573,6 +574,7 @@
 <!-- Shop Cart -->
 
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+ 
   <div class="offcanvas-header border-bottom">
     <div class="text-start">
       <h5 id="offcanvasRightLabel" class="mb-0 fs-4">Shop Cart</h5>

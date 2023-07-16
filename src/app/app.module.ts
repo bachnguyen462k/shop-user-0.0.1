@@ -14,6 +14,7 @@ import { CoreModule } from './core/core.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { SearchModule } from './search/search.module';
+import { WishlistModule } from './wishlist/wishlist.module';
 
 @NgModule({
   declarations: [AppComponent, FooterComponent, HeaderComponent],
@@ -24,6 +25,7 @@ import { SearchModule } from './search/search.module';
     HomeModule,
     AuthModule,
     SearchModule,
+    WishlistModule,
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
