@@ -6,7 +6,7 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class WishlistComponent implements OnInit {
-  faRemove=faTrash;
+ 
   constructor() { }
 
   ngOnInit(): void {

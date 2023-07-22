@@ -19,6 +19,7 @@ import { AboutModule } from './about/about.module';
 import { ProductModule } from './product/product.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ContactModule } from './contact/contact.module';
+import { CartModule } from './cart/cart.module';
 
 
 
@@ -32,6 +33,7 @@ import { ContactModule } from './contact/contact.module';
     AuthModule,
     SearchModule,
     WishlistModule,
+    CartModule,
     ContactModule,
     AboutModule,
     ProductModule,
