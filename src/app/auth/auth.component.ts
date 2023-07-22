@@ -53,7 +53,7 @@ export class AuthComponent implements OnInit {
     .attemptAuth(this.authType, credentials)
     .subscribe(
       data =>{ this.router.navigateByUrl('/');
-      location.reload(); // Tải lại trang
+      // location.reload(); // Tải lại trang
       },
       err => {
         this.errors = err;
