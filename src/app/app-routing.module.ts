@@ -3,10 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { QuicklinkModule, QuicklinkStrategy } from 'ngx-quicklink';
 
 const routes: Routes = [
-  {
-    path: '',
-    loadChildren: () => import('./article/article.module').then(m => m.ArticleModule)
-  },
+
   
   {
     path: 'settings',
@@ -44,7 +41,10 @@ const routes: Routes = [
     path: 'product',
     loadChildren: () => import('./product/product.module').then(m => m.ProductModule)
   },
- 
+  {
+    path: '',
+    loadChildren: () => import('./article/article.module').then(m => m.ArticleModule)
+  },
 
 ];
 

@@ -5,7 +5,7 @@ import { CartDetailComponent } from './cart-detail.component';
 import { CartCheckOutComponent } from './cart-checkout.component';
 const routes: Routes = [
   {
-    path: ':username',
+    path: 'cart',
     component: CartComponent,
     // resolve: {
     //   profile: CartComponent

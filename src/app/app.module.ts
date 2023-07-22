@@ -9,6 +9,7 @@ import {
   HeaderComponent,
   SharedModule
 } from './shared';
+import { CartModule } from './cart/cart.module';
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
@@ -19,13 +20,12 @@ import { AboutModule } from './about/about.module';
 import { ProductModule } from './product/product.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ContactModule } from './contact/contact.module';
-import { CartModule } from './cart/cart.module';
-
 
 
 @NgModule({
   declarations: [AppComponent, FooterComponent, HeaderComponent, ],
   imports: [
+        CartModule,
     BrowserModule,
     CoreModule,
     SharedModule,
@@ -33,7 +33,6 @@ import { CartModule } from './cart/cart.module';
     AuthModule,
     SearchModule,
     WishlistModule,
-    CartModule,
     ContactModule,
     AboutModule,
     ProductModule,
