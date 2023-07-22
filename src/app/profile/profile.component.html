@@ -25,26 +25,26 @@
               <li class="nav-item">
                 <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
                   [routerLink]="['/profile', profile.username, 'favorites']">
-                  <fa-icon [icon]="faGear"></fa-icon> Cài đặt</a>
+                  <i class="feather-icon icon-settings me-2"></i> Cài đặt</a>
               </li>
               <!-- nav item -->
               <li class="nav-item">
                 <a class="nav-link " aria-current="page" routerLinkActive="active"
                   [routerLinkActiveOptions]="{ exact: true }" [routerLink]="['/profile', profile.username]">
-                  <fa-icon [icon]="faShoppingCart"></fa-icon> Đơn hàng</a>
+                  <i class="feather-icon icon-shopping-bag me-2"></i> Đơn hàng</a>
               </li>
               <!-- nav item -->
               <li class="nav-item">
                 <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
                   [routerLink]="['/profile', profile.username, 'address']">
-                  <fa-icon [icon]="faAddressBook"></fa-icon> Địa chỉ</a>
+                  <i class="feather-icon icon-map-pin me-2"></i> Địa chỉ</a>
               </li>
 
               <!-- nav item -->
               <li class="nav-item">
                 <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
                   [routerLink]="['/profile', profile.username, 'notification']">
-                  <fa-icon [icon]="faBell" ></fa-icon> Thông báo</a>
+                  <i class="feather-icon icon-bell me-2"></i> Thông báo</a>
               </li>
               <!-- nav item -->
               <li class="nav-item">
@@ -53,7 +53,7 @@
               <!-- nav item -->
               <li class="nav-item">
                 <a class="nav-link " routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-                  (click)="logout()"><fa-icon [icon]="faRightToBracket"></fa-icon> Đăng Xuất</a>
+                  (click)="logout()"><i class="feather-icon icon-log-out me-2"></i> Đăng Xuất</a>
               </li>
             </ul>
           </div>
