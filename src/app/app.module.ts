@@ -7,6 +7,7 @@ import { HomeModule } from './home/home.module';
 import {
   FooterComponent,
   HeaderComponent,
+  HeaderAdminComponent,
   SharedModule
 } from './shared';
 import { CartModule } from './cart/cart.module';
@@ -23,7 +24,7 @@ import { ContactModule } from './contact/contact.module';
 
 
 @NgModule({
-  declarations: [AppComponent, FooterComponent, HeaderComponent, ],
+  declarations: [AppComponent, FooterComponent, HeaderComponent, HeaderAdminComponent],
   imports: [
         CartModule,
     BrowserModule,
